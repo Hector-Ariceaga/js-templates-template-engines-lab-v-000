@@ -1,11 +1,11 @@
 function createPost() {
-  let postTitle = document.getElementById('titleName')
-  let postAuthor = document.getElementById('authorName')
-  let postText = document.getElementById('postText')
+  let postTitle = document.getElementById('titleName').value
+  let postAuthor = document.getElementById('authorName').value
+  let postText = document.getElementById('postText').value
   console.log(postTitle)
   console.log(postAuthor)
   console.log(postText)
-  
+
   let postTemplate = document.getElementById('post-template').innerHTML;
 
   let templateFn = _.template(postTemplate)
