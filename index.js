@@ -6,14 +6,10 @@ function createPost() {
   let pageTemplate = _.template(document.getElementById('page-template').innerHTML)
   let postTemplate = _.template(document.getElementById('post-template').innerHTML)
   let commentsTemplate = _.template(document.getElementById('comments-template').innerHTML)
-  
+
   console.log(pageTemplate)
   console.log(postTemplate)
   console.log(commentsTemplate)
-
-  let postTemplate = document.getElementById('post-template').innerHTML;
-
-  let templateFn = _.template(postTemplate)
 
   let page = document.getElementById('page-template').innerHTML
 
