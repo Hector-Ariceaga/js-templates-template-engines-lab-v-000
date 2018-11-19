@@ -11,13 +11,22 @@ function createPost() {
   console.log(postTemplate)
   console.log(commentsTemplate)
 
-  let page = document.getElementById('page-template').innerHTML
+  pageTemplate() += document.getElementByTagName('main').innerHTML
 
-  let templateHTML = templateFn({postTitle: postTitle, postAuthor: postAuthor, postText: postText})
-
-  page.innerHTML += templateHTML
+  let blog = postTemplate({'postTitle': postTitle, 'postAuthor': postAuthor, 'postText': postText});
+  let comments = commentsTemplate();
+  let post = document.getElementById('post');
+  
+  post.innerHTML += blog;
+  post.getElementByTagName('footer')[0].innerHTML = comments
 }
 
 function postComment() {
+  let commenterName = document.getElementById('commenterName').value
+  let commentText = document.getElementById('commentText').value
 
+  let commentTemplate = _.template(document.getElementById('comment-template').innerHTML)
+
+  let comments = document.getElementById('comments')
+  comments.innerHTML += commentTemplate({'commenterName': commenterName, 'commentText': commentText})
 }
