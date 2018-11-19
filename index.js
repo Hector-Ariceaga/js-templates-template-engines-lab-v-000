@@ -18,7 +18,7 @@ function createPost() {
   let post = document.getElementById('post');
 
   post.innerHTML += blog;
-  post.getElementByTagName('footer')[0].innerHTML = comments
+  post.getElementsByTagName('footer')[0].innerHTML = comments
 }
 
 function postComment() {
