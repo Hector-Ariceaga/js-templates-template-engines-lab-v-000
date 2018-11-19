@@ -16,7 +16,7 @@ function createPost() {
   let blog = postTemplate({'postTitle': postTitle, 'postAuthor': postAuthor, 'postText': postText});
   let comments = commentsTemplate();
   let post = document.getElementById('post');
-  
+
   post.innerHTML += blog;
   post.getElementByTagName('footer')[0].innerHTML = comments
 }
