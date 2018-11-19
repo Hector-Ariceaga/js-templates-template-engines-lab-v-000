@@ -11,7 +11,7 @@ function createPost() {
   console.log(postTemplate)
   console.log(commentsTemplate)
 
-  document.getElementByTagName('main').innerHTML += pageTemplate()
+  document.getElementByTagName('main')[0].innerHTML += pageTemplate()
 
   let blog = postTemplate({'postTitle': postTitle, 'postAuthor': postAuthor, 'postText': postText});
   let comments = commentsTemplate();
